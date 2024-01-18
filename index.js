@@ -1,10 +1,6 @@
 
 content = document.getElementById('content');
 button = document.getElementById('btn')
-let idx = document.getElementById('idx').value
-idy = document.getElementById('idy').value
-time = document.getElementById('time').value
-cant = document.getElementById('cant').value
 
 const changeBtn = ()=>{
     if(button.value == "Start"){ button.innerText = "Pause"}
@@ -12,9 +8,28 @@ const changeBtn = ()=>{
 
 const pressBtn = ()=>{
     //changeBtn();
-    if(idx)
-        console.log(idx);
-    else console.log('hola');
+    let idx = document.getElementById('idx').value
+    let idy = document.getElementById('idy').value
+    let time = document.getElementById('time').value
+    let cant = document.getElementById('cant').value
+
+    createTable(idx, idy);
     
+}
+
+const createTable = (x,y)=>{
+    const table = document.createElement("table")
+
+    table.innerHTML = "<th>cosa</th>"
+    document.body.appendChild(table)
+
+    // for (let index = 0; index < x; index++) {
+    //     for (let index = 0; index < y; index++) {
+            
+
+            
+    //     }
+        
+    // }
 }
 
